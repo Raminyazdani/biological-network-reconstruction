@@ -1,0 +1,10 @@
+Ramin Yazdani | MetaFlux | main | feat(init): Initial commit - Create repository with basic README
+
+Created repository with minimal structure focusing on metabolic network analysis.
+Added initial README with project concept and overview.
+
+This commit establishes the foundation for the MetaFlux project, which will analyze
+E. coli genome-scale metabolic models using constraint-based modeling to predict
+gene essentiality and validate against experimental datasets.
+
+Verified: Basic repository structure is in place with descriptive README.
