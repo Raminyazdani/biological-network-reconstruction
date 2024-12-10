@@ -1,10 +1,13 @@
-Ramin Yazdani | MetaFlux | main | feat(init): Initial commit - Create repository with basic README
+Ramin Yazdani | MetaFlux | main | feat(deps): Add requirements.txt with metabolic modeling stack
 
-Created repository with minimal structure focusing on metabolic network analysis.
-Added initial README with project concept and overview.
+Added requirements.txt with essential Python packages for metabolic network analysis.
+Core dependencies include:
+- COBRApy for constraint-based metabolic modeling
+- Pandas and NumPy for data manipulation
+- Jupyter for interactive analysis
+- NetworkX and Matplotlib for visualization
 
-This commit establishes the foundation for the MetaFlux project, which will analyze
-E. coli genome-scale metabolic models using constraint-based modeling to predict
-gene essentiality and validate against experimental datasets.
+All packages are standard PyPI packages with stable versions. This provides the
+foundation for implementing flux balance analysis and gene essentiality predictions.
 
-Verified: Basic repository structure is in place with descriptive README.
+Verified: All listed dependencies are available and compatible.
