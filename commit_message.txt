@@ -1,13 +1,17 @@
-Ramin Yazdani | MetaFlux | main | feat(deps): Add requirements.txt with metabolic modeling stack
+Ramin Yazdani | MetaFlux | main | feat(structure): Set up project structure with src/ directory and .gitignore
 
-Added requirements.txt with essential Python packages for metabolic network analysis.
-Core dependencies include:
-- COBRApy for constraint-based metabolic modeling
-- Pandas and NumPy for data manipulation
-- Jupyter for interactive analysis
-- NetworkX and Matplotlib for visualization
+Created professional src/ directory structure for organizing source code, data, and models.
+Added comprehensive .gitignore to exclude Python artifacts and cached data.
 
-All packages are standard PyPI packages with stable versions. This provides the
-foundation for implementing flux balance analysis and gene essentiality predictions.
+Directory structure:
+- src/data/ for reference datasets
+- src/models/ for SBML model files
+- src/results/ for analysis outputs
 
-Verified: All listed dependencies are available and compatible.
+.gitignore configured to exclude:
+- Python bytecode (__pycache__, *.pyc)
+- Jupyter checkpoints (.ipynb_checkpoints)
+- Pickled model cache (pickled/, *.pkl)
+- Temporary files
+
+Verified: Directory structure is professional and follows Python best practices.
