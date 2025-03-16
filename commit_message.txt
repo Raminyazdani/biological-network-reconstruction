@@ -1,16 +1,12 @@
-Ramin Yazdani | MetaFlux | main | feat(analysis): Create initial metabolic analysis notebook with FBA basics
+Ramin Yazdani | MetaFlux | main | WIP(models): Add multi-model loading capability (path error)
 
-Implemented initial version of analysis notebook with basic flux balance analysis.
-Created framework for loading E. coli metabolic models from BiGG database and
-performing gene knockout simulations.
+Extended notebook to load multiple E. coli models for comparative analysis.
+Implemented model iteration logic to process batch of models.
 
-Key features:
-- Model loading functions using COBRApy
-- Basic FBA optimization to predict growth rates
-- Simple gene knockout simulation framework
-- Tested successfully with iJO1366 model
+Bug introduced: Used incorrect relative path '../models/' for model directory.
+This path assumes execution from a subdirectory, but the notebook runs from src/.
+Models are not loading correctly due to incorrect path resolution.
 
-This establishes the core analysis pipeline that will be expanded to handle
-multiple models and comparison with experimental data.
+Will fix in next commit after identifying the issue during testing.
 
-Verified: Notebook successfully loads models and performs basic FBA calculations.
+Status: Models failing to load with FileNotFoundError.
