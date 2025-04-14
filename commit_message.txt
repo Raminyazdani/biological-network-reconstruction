@@ -1,12 +1,13 @@
-Ramin Yazdani | MetaFlux | main | WIP(models): Add multi-model loading capability (path error)
+Ramin Yazdani | MetaFlux | main | feat(models): Fix model directory path in notebook
 
-Extended notebook to load multiple E. coli models for comparative analysis.
-Implemented model iteration logic to process batch of models.
+Fixed model loading paths from '../models/' to 'models/' to work correctly
+when notebook is executed from src/ directory.
 
-Bug introduced: Used incorrect relative path '../models/' for model directory.
-This path assumes execution from a subdirectory, but the notebook runs from src/.
-Models are not loading correctly due to incorrect path resolution.
+Root cause: The relative path '../models/' assumed notebook execution from a
+nested directory, but actual execution context is src/, requiring 'models/'
+as the correct relative path.
 
-Will fix in next commit after identifying the issue during testing.
+Fix tested with 2-3 models to confirm proper path resolution. All models now
+load successfully from src/models/ directory.
 
-Status: Models failing to load with FileNotFoundError.
+Verified: Model loading works correctly from src/ execution context.
