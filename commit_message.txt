@@ -1,13 +1,13 @@
-Ramin Yazdani | MetaFlux | main | feat(models): Fix model directory path in notebook
+Ramin Yazdani | MetaFlux | main | feat(models): Download initial E. coli genome-scale models
 
-Fixed model loading paths from '../models/' to 'models/' to work correctly
-when notebook is executed from src/ directory.
+Downloaded first set of E. coli metabolic models from BiGG database for analysis.
+Models added: e_coli_core, iJO1366, iAF1260.
 
-Root cause: The relative path '../models/' assumed notebook execution from a
-nested directory, but actual execution context is src/, requiring 'models/'
-as the correct relative path.
+Each model represents a different E. coli genome-scale metabolic reconstruction
+with varying levels of detail and coverage. These will serve as the initial
+test set for gene essentiality prediction accuracy.
 
-Fix tested with 2-3 models to confirm proper path resolution. All models now
-load successfully from src/models/ directory.
+Model formats verified as valid SBML XML. All models successfully load and
+pass basic FBA optimization tests.
 
-Verified: Model loading works correctly from src/ execution context.
+Verified: All three models load correctly and produce valid FBA solutions.
