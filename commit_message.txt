@@ -1,17 +1,17 @@
-Ramin Yazdani | MetaFlux | main | feat(data): Add missing openpyxl and xlrd imports for Excel handling
+Ramin Yazdani | MetaFlux | main | feat(comparison): Add comparison functions between predictions and experimental data
 
-Fixed missing imports for Excel and ODS file handling libraries.
-Added explicit import statements for openpyxl (xlsx), xlrd (xls), and odfpy (ods).
+Implemented comprehensive comparison logic to align in-silico gene knockout
+predictions with experimental essentiality datasets.
 
-Root cause: Pandas can handle Excel files automatically if libraries are installed,
-but best practice requires explicit imports to ensure proper dependency tracking
-and avoid runtime errors on fresh environments.
+Key features:
+- Data processing pipeline for multiple reference dataset formats
+- Gene ID matching and normalization across different naming conventions
+- Prediction vs experimental data alignment using common gene identifiers
+- Data validation and cleaning to handle missing or ambiguous entries
+- Structured comparison tables for downstream analysis
 
-Imports added to notebook's dependency cell:
-- import openpyxl  # for .xlsx files
-- import xlrd      # for .xls files  
-- import odf       # for .ods files
+The comparison framework handles differences in gene nomenclature between
+computational models (locus tags, gene names) and experimental datasets,
+ensuring accurate matching for validation metrics.
 
-Tested data loading from all four reference datasets successfully.
-
-Verified: All reference datasets load correctly with explicit imports.
+Verified: Comparison logic correctly aligns predictions with experimental data.
