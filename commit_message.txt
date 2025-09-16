@@ -1,17 +1,17 @@
-Ramin Yazdani | MetaFlux | main | feat(comparison): Add comparison functions between predictions and experimental data
+Ramin Yazdani | MetaFlux | main | feat(metrics): Implement precision and recall accuracy metrics
 
-Implemented comprehensive comparison logic to align in-silico gene knockout
-predictions with experimental essentiality datasets.
+Added calculation of precision and recall metrics for gene essentiality predictions.
+These metrics quantify how well each metabolic model predicts essential genes
+compared to experimental knockout data.
 
-Key features:
-- Data processing pipeline for multiple reference dataset formats
-- Gene ID matching and normalization across different naming conventions
-- Prediction vs experimental data alignment using common gene identifiers
-- Data validation and cleaning to handle missing or ambiguous entries
-- Structured comparison tables for downstream analysis
+Metrics implemented:
+- Precision: true positives / (true positives + false positives)
+  Measures proportion of predicted essential genes that are truly essential
+  
+- Recall: true positives / (true positives + false negatives)
+  Measures proportion of truly essential genes correctly predicted
 
-The comparison framework handles differences in gene nomenclature between
-computational models (locus tags, gene names) and experimental datasets,
-ensuring accurate matching for validation metrics.
+Calculations performed per-gene and per-model to enable both detailed analysis
+and model-level comparisons. Results exported to initial CSV outputs.
 
-Verified: Comparison logic correctly aligns predictions with experimental data.
+Verified: Precision and recall calculations match expected values for test cases.
