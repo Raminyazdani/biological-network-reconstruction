@@ -1,17 +1,20 @@
-Ramin Yazdani | MetaFlux | main | feat(metrics): Implement precision and recall accuracy metrics
+Ramin Yazdani | MetaFlux | main | feat(metrics): Add F1-score and Matthews Correlation Coefficient
 
-Added calculation of precision and recall metrics for gene essentiality predictions.
-These metrics quantify how well each metabolic model predicts essential genes
-compared to experimental knockout data.
+Enhanced accuracy assessment with F1-score and Matthews Correlation Coefficient (MCC)
+for more comprehensive model evaluation.
 
-Metrics implemented:
-- Precision: true positives / (true positives + false positives)
-  Measures proportion of predicted essential genes that are truly essential
+Additional metrics:
+- F1-Score: 2 * (precision * recall) / (precision + recall)
+  Harmonic mean of precision and recall, provides balanced accuracy measure
   
-- Recall: true positives / (true positives + false negatives)
-  Measures proportion of truly essential genes correctly predicted
+- MCC: (TP*TN - FP*FN) / sqrt((TP+FP)(TP+FN)(TN+FP)(TN+FN))
+  Balanced metric that accounts for all confusion matrix elements
+  Particularly useful when class distribution is imbalanced
 
-Calculations performed per-gene and per-model to enable both detailed analysis
-and model-level comparisons. Results exported to initial CSV outputs.
+These metrics provide complementary views of model accuracy. F1-score balances
+precision and recall, while MCC gives a single correlation coefficient between
+predictions and observations.
 
-Verified: Precision and recall calculations match expected values for test cases.
+Results exported to comprehensive accuracy comparison tables.
+
+Verified: F1 and MCC calculations validated against known correct values.
