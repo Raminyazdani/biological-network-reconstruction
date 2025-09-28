@@ -1,20 +1,23 @@
-Ramin Yazdani | MetaFlux | main | feat(metrics): Add F1-score and Matthews Correlation Coefficient
+Ramin Yazdani | MetaFlux | main | feat(results): Complete analysis - Generate results CSVs and visualizations
 
-Enhanced accuracy assessment with F1-score and Matthews Correlation Coefficient (MCC)
-for more comprehensive model evaluation.
+Ran complete gene essentiality analysis across all 60+ E. coli metabolic models
+and generated comprehensive results and visualizations.
 
-Additional metrics:
-- F1-Score: 2 * (precision * recall) / (precision + recall)
-  Harmonic mean of precision and recall, provides balanced accuracy measure
+Outputs generated:
+- gene_accuracy_results_per_reference_and_metrics.csv
+  Per-gene accuracy across all models and reference datasets
   
-- MCC: (TP*TN - FP*FN) / sqrt((TP+FP)(TP+FN)(TN+FP)(TN+FN))
-  Balanced metric that accounts for all confusion matrix elements
-  Particularly useful when class distribution is imbalanced
+- model_accuracy_results_per_reference_and_metrics.csv  
+  Per-model performance rankings with all accuracy metrics
+  
+- gene_knockout_comparison.csv
+  Detailed knockout simulation results for each gene and model
+  
+- output.png
+  Comparative visualizations (charts, heatmaps)
 
-These metrics provide complementary views of model accuracy. F1-score balances
-precision and recall, while MCC gives a single correlation coefficient between
-predictions and observations.
+Analysis reveals significant variation in model accuracy, with some models
+achieving >85% F1-score while others show lower predictive power. Results
+documented in notebook markdown cells with interpretation.
 
-Results exported to comprehensive accuracy comparison tables.
-
-Verified: F1 and MCC calculations validated against known correct values.
+Verified: All CSV files contain expected data structure and complete results.
