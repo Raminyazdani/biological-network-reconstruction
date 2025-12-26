@@ -1,1 +1,13 @@
 FILE	LOCATOR	BEFORE_SNIPPET	AFTER_SNIPPET	NOTES
+.gitignore file creation(none)Created .gitignore with Python/Jupyter patternsCreated to exclude temporary files, __pycache__, pickled data
+~WRL2819.tmpfile removal~WRL2819.tmp (temp file)(removed)Removed temporary MS Word file from repository
+~$زسازی_شبکه_های_متابولیک_آقای_سیاوش_کاوسی (AutoRecovered).docxfile removalAutoRecovered file(removed)Removed temporary AutoRecovered Word file
+گزارش.docxfile moveگزارش.docx (root)docs/archive/گزارش.docxMoved Persian report to archive directory
+README.md line 1-3**Project Type:** University ProjectProfessional title and overview section with badgesRemoved academic labeling, added professional project identity
+README.md line 10-18Old tech stack sectionAdded Scientific Background sectionAdded context about GEMs and research problem
+README.md line 19-30Basic tech stack listDetailed tech stack with subsectionsEnhanced to show core technologies and additional libraries
+README.md line 22-40Old folder structure with Persian namesProfessional repository structureUpdated to reflect new organization (src/, docs/, etc.)
+README.md line 44-58Basic setup instructionsComprehensive setup with prerequisites and virtual envEnhanced installation guide with detailed steps
+README.md line 60-70Simple "how to run" instructionsDetailed usage guide with pipeline overviewAdded comprehensive running instructions and analysis workflow
+README.md line 80-95Basic inputs/outputsDetailed data section with descriptionsAdded comprehensive input/output documentation
+README.md line 97-112Basic troubleshootingComprehensive troubleshooting and reproducibility notesAdded detailed troubleshooting, reproducibility info, citations
