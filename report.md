@@ -39,3 +39,85 @@
 5. Some relative paths could be more robust
 6. Missing .gitignore file
 
+## Phase 1: Understanding & Planning
+
+### 1.1 Repository Structure Analysis
+
+**Current Structure:**
+```
+biological-network-reconstruction/
+├── .github/
+├── python_prj/pythonProject/  (main code directory - RENAME NEEDED)
+│   ├── project.ipynb          (main analysis notebook)
+│   ├── test.py                (simple test script)
+│   ├── models/                (60+ SBML model files, ~687MB)
+│   ├── pickled/               (8 serialized model objects)
+│   ├── *.xlsx, *.xls, *.ods   (reference datasets)
+│   └── *.csv, *.png           (output files)
+├── فایل های استفاده شده از مقالات/  (reference data - RENAME NEEDED)
+├── نتایج/                              (results - RENAME NEEDED)
+├── گزارش.docx                          (Persian report - MOVE/ARCHIVE)
+├── ~WRL2819.tmp                        (temp file - REMOVE)
+├── ~$زسازی... (AutoRecovered).docx    (temp file - REMOVE)
+├── README.md
+└── requirements.txt
+```
+
+**Proposed Professional Structure:**
+```
+metabolic-network-essentiality-analyzer/
+├── .github/
+├── src/                       (renamed from python_prj/pythonProject/)
+│   ├── metabolic_analysis.ipynb  (renamed from project.ipynb)
+│   ├── models/                (unchanged - large model files)
+│   ├── pickled/               (unchanged - cached data)
+│   ├── data/                  (reference datasets)
+│   └── results/               (output files)
+├── docs/                      (optional - for archived reports)
+├── .gitignore                 (NEW)
+├── README.md                  (UPDATED)
+└── requirements.txt
+```
+
+### 1.2 Naming Alignment Plan
+
+**Safe Renames (will update all references):**
+1. `python_prj/pythonProject/` → `src/`
+2. `نتایج/` → `results/` (or integrate into src/results/)
+3. `فایل های استفاده شده از مقالات/` → `data/references/` or consolidate
+4. `project.ipynb` → `metabolic_analysis.ipynb`
+5. Persian/temp files → Archive or remove
+
+**Path Updates Required:**
+- Notebook cell[2]: `./pickled/*.pkl` → use pathlib
+- Notebook cell[11]: `models/Recon3D.xml` → use pathlib with script dir
+- Notebook cell[17]: `./msb4100050-s5.xls` → use pathlib
+
+**Documentation Updates:**
+- README.md: Remove "University Project", update structure diagram
+- README.md: Update all path references
+- Update with professional identity from project_identity.md
+
+### 1.3 Safety Considerations
+
+**Will NOT change:**
+- Model files content (60+ XML files in models/)
+- Pickled data (already generated)
+- Core analysis logic in notebook
+- Output CSV files (they demonstrate results)
+
+**Will be careful with:**
+- Consolidating duplicate reference data (exists in multiple places)
+- Path references in notebook code cells
+- Working directory assumptions
+
+## Phase 2: Pre-Change Audit Complete
+
+Recorded 14 issues in suggestion.txt:
+- 1 TRACE issue (University Project label)
+- 6 RENAME issues (directories and files)
+- 3 PATH issues (brittle relative paths)
+- 3 OTHER issues (temp files, missing files)
+- 1 STRUCTURE issue (.gitignore)
+- 1 DOC issue (README folder structure)
+
