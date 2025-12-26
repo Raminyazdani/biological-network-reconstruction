@@ -1,15 +1,15 @@
-TYPE	FILE	LOCATOR	BEFORE_SNIPPET	PROPOSED_CHANGE	RATIONALE	STATUS
-TRACEREADME.mdline 3**Project Type:** University ProjectRemove "University Project" label and replace with professional framingMakes repository appear as coursework rather than portfolio project_identity.md NOT_APPLIED
-RENAMEpython_prj/pythonProject/directory structurepython_prj/pythonProject/Rename to src/ for professional Python project structureGeneric nested directory names (pythonProject) are not professionalNOT_APPLIED
-RENAMEنتایج/directory nameنتایج/Rename to results/ for English naming consistencyPersian directory names may cause compatibility issues and are not standard for international projectsNOT_APPLIED
-RENAMEفایل های استفاده شده از مقالات/directory nameفایل های استفاده شده از مقالات/Rename to reference_data/ or data/references/Persian directory names should be English for professional repositoriesNOT_APPLIED
-OTHER~WRL2819.tmpfile~WRL2819.tmpRemove temporary file from repositoryTemporary MS Word files should not be in version controlNOT_APPLIED
-OTHER~$زسازی_شبکه_های_متابولیک_آقای_سیاوش_کاوسی (AutoRecovered).docxfile~$زسازی_شبکه_های_متابولیک_آقای_سیاوش_کاوسی (AutoRecovered).docxRemove or archive AutoRecovered Word fileAutoRecovered files are temporary and should not be committedNOT_APPLIED
-OTHERگزارش.docxfileگزارش.docxMove to docs/ or archive/ with English namingPersian filename should be relocated or renamed for professional contextNOT_APPLIED
-PATHpython_prj/pythonProject/project.ipynbcell[2]files = glob.glob("./pickled/*.pkl")Use pathlib or project-relative pathsRelative paths assuming specific working directory are brittleNOT_APPLIED
-PATHpython_prj/pythonProject/project.ipynbcell[17]file_1 = "./msb4100050-s5.xls"Use pathlib for robust path handlingBrittle relative path that assumes notebook runs from its own directoryNOT_APPLIED
-PATHpython_prj/pythonProject/project.ipynbcell[11]model_filename = "models/Recon3D.xml"Use pathlib or script-relative pathsPath assumes execution from project directoryNOT_APPLIED
-STRUCTURE.gitignoremissing file(none)Create .gitignore for Python project_identity.md Should exclude __pycache__, *.pyc, .ipynb_checkpoints, pickled/, temp filesNOT_APPLIED
-DOCREADME.mdline 22-40بازسازی شبکه های زیستی/Update folder structure diagram to match new namesDocumentation will be outdated after renamesNOT_APPLIED
-RENAMEpython_prj/pythonProject/result_temp.csvfilenameresult_temp.csvRemove temp file or add to .gitignoreTemporary result files should not be committedNOT_APPLIED
-RENAMEpython_prj/pythonProject/project.ipynbfilenameproject.ipynbRename to metabolic_analysis.ipynb or similar descriptive nameGeneric "project.ipynb" is not descriptiveNOT_APPLIED
+TYPEFILELOCATORBEFORE_SNIPPETPROPOSED_CHANGERATIONALESTATUS
+TRACEREADME.mdline 3**Project Type:** University ProjectRemove "University Project" label and replace with professional framingMakes repository appear as coursework rather than portfolio project_identity.md APPLIED
+RENAMEpython_prj/pythonProject/directory structurepython_prj/pythonProject/Rename to src/ for professional Python project structureGeneric nested directory names (pythonProject) are not professionalAPPLIED
+RENAMEنتایج/directory nameنتایج/Rename to results/ for English naming consistencyPersian directory names may cause compatibility issues and are not standard for international projectsAPPLIED
+RENAMEفایل های استفاده شده از مقالات/directory nameفایل های استفاده شده از مقالات/Rename to reference_data/ or data/references/Persian directory names should be English for professional repositoriesAPPLIED
+OTHER~WRL2819.tmpfile~WRL2819.tmpRemove temporary file from repositoryTemporary MS Word files should not be in version controlAPPLIED
+OTHER~$زسازی_شبکه_های_متابولیک_آقای_سیاوش_کاوسی (AutoRecovered).docxfile~$زسازی_شبکه_های_متابولیک_آقای_سیاوش_کاوسی (AutoRecovered).docxRemove or archive AutoRecovered Word fileAutoRecovered files are temporary and should not be committedAPPLIED
+OTHERگزارش.docxfileگزارش.docxMove to docs/ or archive/ with English namingPersian filename should be relocated or renamed for professional contextAPPLIED
+PATHpython_prj/pythonProject/project.ipynbcell[2]files = glob.glob("./pickled/*.pkl")Use pathlib or project-relative pathsRelative paths assuming specific working directory are brittleAPPLIED
+PATHpython_prj/pythonProject/project.ipynbcell[17]file_1 = "./msb4100050-s5.xls"Use pathlib for robust path handlingBrittle relative path that assumes notebook runs from its own directoryAPPLIED
+PATHpython_prj/pythonProject/project.ipynbcell[11]model_filename = "models/Recon3D.xml"Use pathlib or script-relative pathsPath assumes execution from project directoryAPPLIED
+STRUCTURE.gitignoremissing file(none)Create .gitignore for Python project_identity.md Should exclude __pycache__, *.pyc, .ipynb_checkpoints, pickled/, temp filesAPPLIED
+DOCREADME.mdline 22-40بازسازی شبکه های زیستی/Update folder structure diagram to match new namesDocumentation will be outdated after renamesAPPLIED
+RENAMEpython_prj/pythonProject/result_temp.csvfilenameresult_temp.csvRemove temp file or add to .gitignore Temporary result files should not be committedNOT_APPLIED (kept as example output)
+RENAMEpython_prj/pythonProject/project.ipynbfilenameproject.ipynbRename to metabolic_analysis.ipynb or similar descriptive nameGeneric "project.ipynb" is not descriptiveAPPLIED

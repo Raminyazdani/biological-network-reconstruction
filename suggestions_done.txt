@@ -11,3 +11,11 @@ README.md line 44-58Basic setup instructionsComprehensive setup with prerequisit
 README.md line 60-70Simple "how to run" instructionsDetailed usage guide with pipeline overviewAdded comprehensive running instructions and analysis workflow
 README.md line 80-95Basic inputs/outputsDetailed data section with descriptionsAdded comprehensive input/output documentation
 README.md line 97-112Basic troubleshootingComprehensive troubleshooting and reproducibility notesAdded detailed troubleshooting, reproducibility info, citations
+python_prj/pythonProject/directory renamepython_prj/pythonProject/ → src/Renamed generic nested directories to professional src/ structureMajor structural improvement for portfolio presentation
+project.ipynbfile renamepython_prj/pythonProject/project.ipynb → src/metabolic_analysis.ipynb Renamed generic notebook name to descriptive nameBetter describes the notebook's purpose
+نتایج/directory consolidationنتایج/ (Persian results folder)Removed (contents moved to src/results/)Consolidated duplicate results, removed Persian naming
+فایل های استفاده شده از مقالات/directory removalفایل های استفاده شده از مقالات/Removed (duplicate data files)Reference data already exists in src/data/
+src/metabolic_analysis.ipynb cell[2]files = glob.glob("./pickled/*.pkl")files = glob.glob("pickled/*.pkl")Updated relative path to work from src/ directory
+src/metabolic_analysis.ipynb cell[17]file_1 = "./msb4100050-s5.xls"file_1 = "data/msb4100050-s5.xls"Updated path to reflect new data/ subdirectory
+src/metabolic_analysis.ipynb cell[17]file_2 = "./MSB-14-e7573-s004.xlsx"file_2 = "data/MSB-14-e7573-s004.xlsx"Updated path to reflect new data/ subdirectory
+src/metabolic_analysis.ipynb cell[16]lb_medium_file = "pone.0236890.s001.ods"lb_medium_file = "data/pone.0236890.s001.ods"Updated path to reflect new data/ subdirectory
