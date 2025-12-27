@@ -1,38 +1,22 @@
-# Biological Network Reconstruction
+# Metabolic Network Reconstruction
 
-A computational biology project for metabolic network modeling and gene essentiality analysis.
+## Project Overview
 
-## Overview
+This project focuses on analyzing E. coli metabolic networks using constraint-based modeling and gene essentiality prediction.
 
-This project uses constraint-based metabolic modeling (COBRApy) to analyze E. coli genome-scale models and predict gene essentiality.
+## Goals
 
-## Tech Stack
+- Analyze genome-scale metabolic models
+- Predict gene essentiality using flux balance analysis
+- Compare predictions against experimental data
+- Evaluate model accuracy
 
-- Python 3.x
+## Technologies
+
+- Python
+- COBRApy (Constraint-Based Reconstruction and Analysis)
 - Jupyter Notebook
-- Pandas, NumPy
-- COBRApy for metabolic modeling
-- NetworkX for network analysis
 
-## Getting Started
+## Status
 
-Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-## Project Structure
-
-```
-biological-network-reconstruction/
-├── README.md
-├── requirements.txt
-├── .gitignore
-└── src/
-    ├── data/
-    └── models/
-```
-
-## License
-
-This project is for academic and research purposes.
+Initial project setup
